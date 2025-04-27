@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja Tech</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #222;
+      padding: 15px 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Checkbox escondido */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Ícone hambúrguer */
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #4CAF50;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-text button {
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Produtos */
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .produto {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .produto img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .produto h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .produto button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #222;
+      }
+
+      .menu a {
+        margin: 10px 0;
+        padding: 10px 0;
+        border-top: 1px solid #333;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Quando o checkbox estiver checado, mostrar o menu */
+      #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Loja Tech</div>
+
+      <!-- Checkbox escondido -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">☰</label>
+
+      <div class="menu">
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Suporte</a>
+        <a href="#">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bem-vindo à Loja Tech!</h1>
+      <p>Os melhores produtos de tecnologia para você.</p>
+      <button>Ver Ofertas</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://th.bing.com/th/id/OIP.niEPrZmoppWWo6tvGxDx6AHaHa?rs=1&pid=ImgDetMain" alt="Notebook em Promoção" />
+    </div>
+  </section>
+
+  <section class="produtos">
+    <div class="produto">
+      <img src="https://th.bing.com/th/id/OIP.DwRKmyXqL7sV5U0rG3pVewHaHa?rs=1&pid=ImgDetMain" alt="Mouse Gamer" />
+      <h3>Mouse Gamer</h3>
+      <button>Comprar</button>
+    </div>
+    <div class="produto">
+      <img src="https://www.hd-tecnologia.com/imagenes/articulos/2017/02/CoolerMaster-MasterKeys-Pro-M-y-Pro-S-anunciados.jpg" alt="Teclado" />
+      <h3>Teclado Mecânico</h3>
+      <button>Comprar</button>
+    </div>
+    <div class="produto">
+      <img src="https://th.bing.com/th/id/OIP.9VX_6KuLrfkDNabP4L0RIwHaHa?w=500&h=500&rs=1&pid=ImgDetMain" alt="Headset Gamer" />
+      <h3>Headset Surround</h3>
+      <button>Comprar</button>
+    </div>
+    <div class="produto">
+      <img src="https://th.bing.com/th/id/OIP.hWerN_zdUjPJVavloeYz5wHaFf?rs=1&pid=ImgDetMain" alt="Monitor 4K" />
+      <h3>Monitor 4K 27”</h3>
+      <button>Comprar</button>
+    </div>
+  </section>
+
+</body>
+</html>
